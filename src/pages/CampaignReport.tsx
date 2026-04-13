@@ -40,7 +40,6 @@ export default function CampaignReport() {
         </p>
       </div>
 
-      {/* Big rate numbers */}
       <div className="grid grid-cols-2 gap-4">
         <div className="bg-white rounded-xl border border-gray-200 p-6 text-center">
           <p className="text-4xl font-bold text-indigo-600">{openRate}%</p>
@@ -52,7 +51,6 @@ export default function CampaignReport() {
         </div>
       </div>
 
-      {/* Detail stats */}
       <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-4">
         {statItems.map((s) => (
           <div key={s.label} className="bg-white rounded-xl border border-gray-200 p-4 text-center">
@@ -62,7 +60,6 @@ export default function CampaignReport() {
         ))}
       </div>
 
-      {/* Recipient activity */}
       <div className="bg-white rounded-xl border border-gray-200">
         <div className="px-6 py-4 border-b border-gray-200">
           <h2 className="text-lg font-semibold text-gray-900">Recipient Activity</h2>
@@ -83,18 +80,10 @@ export default function CampaignReport() {
                   <td className="px-6 py-3 font-medium text-gray-900">{r.name}</td>
                   <td className="px-6 py-3 text-gray-600">{r.email}</td>
                   <td className="px-6 py-3">
-                    {r.opened ? (
-                      <Check className="w-4 h-4 text-emerald-500" />
-                    ) : (
-                      <X className="w-4 h-4 text-gray-300" />
-                    )}
+                    {r.opened ? <Check className="w-4 h-4 text-emerald-500" /> : <X className="w-4 h-4 text-gray-300" />}
                   </td>
                   <td className="px-6 py-3">
-                    {r.clicked ? (
-                      <Check className="w-4 h-4 text-emerald-500" />
-                    ) : (
-                      <X className="w-4 h-4 text-gray-300" />
-                    )}
+                    {r.clicked ? <Check className="w-4 h-4 text-emerald-500" /> : <X className="w-4 h-4 text-gray-300" />}
                   </td>
                 </tr>
               ))}

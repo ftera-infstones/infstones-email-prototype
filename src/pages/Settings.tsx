@@ -208,7 +208,7 @@ function UsersTab() {
         <div>
           <h3>Users</h3>
           <span className="muted" style={{ fontSize: 12 }}>
-            Manage team members and their roles
+            Manage team members and roles
           </span>
         </div>
         <button className="btn btn-primary btn-sm" onClick={() => setShowAdd(true)}>

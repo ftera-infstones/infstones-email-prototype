@@ -83,7 +83,7 @@ export default function Layout() {
     <div className="app">
       <aside className="sidebar">
         <div className="sb-brand">
-          <img src="/ifs-logo.svg" alt="InfStones" />
+          <img src={`${import.meta.env.BASE_URL}ifs-logo.svg`} alt="InfStones" />
         </div>
 
         <Link to="/campaigns/new" className="sb-compose">

@@ -183,8 +183,6 @@ function UsersTab() {
       name: newForm.name,
       email: newForm.email,
       role: newForm.role,
-      status: "active",
-      invitedAt: new Date().toISOString().split("T")[0],
     };
     setUsers([...users, u]);
     setShowAdd(false);
@@ -226,15 +224,13 @@ function UsersTab() {
               <th>Name</th>
               <th>Email</th>
               <th>Role</th>
-              <th>Status</th>
-              <th>Invited</th>
               <th>Actions</th>
             </tr>
           </thead>
           <tbody>
             {users.length === 0 && (
               <tr>
-                <td colSpan={6} style={{ textAlign: "center", color: "var(--muted)", padding: "32px 0" }}>
+                <td colSpan={4} style={{ textAlign: "center", color: "var(--muted)", padding: "32px 0" }}>
                   No users yet.
                 </td>
               </tr>
@@ -267,12 +263,6 @@ function UsersTab() {
                 <td>
                   <span className={`badge ${u.role}`}>{u.role === "admin" ? "Admin" : "Member"}</span>
                 </td>
-                <td>
-                  <span className={`badge ${u.status === "active" ? "active" : "draft"}`}>
-                    {u.status === "active" ? "Active" : "Inactive"}
-                  </span>
-                </td>
-                <td style={{ color: "var(--muted)", fontSize: 12 }}>{u.invitedAt}</td>
                 <td>
                   <div style={{ display: "flex", gap: 6 }}>
                     <button

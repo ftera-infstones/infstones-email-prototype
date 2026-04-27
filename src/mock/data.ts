@@ -1,7 +1,6 @@
 export type SubscriberStatus = "active" | "unsubscribed";
 export type CampaignStatus = "sent" | "scheduled" | "draft" | "sending";
 export type UserRole = "admin" | "member";
-export type UserStatus = "active" | "inactive";
 
 export interface Subscriber {
   id: string;
@@ -57,8 +56,6 @@ export interface User {
   name: string;
   email: string;
   role: UserRole;
-  status: UserStatus;
-  invitedAt: string;
 }
 
 export const mockSubscribers: Subscriber[] = [
@@ -118,9 +115,9 @@ export const mockTrend: TrendPoint[] = [
 ];
 
 export const mockUsers: User[] = [
-  { id: "u1", name: "Hongxuan Liu", email: "hongxuan.liu@infstones.com", role: "admin", status: "active", invitedAt: "2026-01-10" },
-  { id: "u2", name: "Pamela Chen", email: "pamela.chen@infstones.com", role: "admin", status: "active", invitedAt: "2026-01-10" },
-  { id: "u3", name: "Kevin Wang", email: "kevin.wang@infstones.com", role: "member", status: "active", invitedAt: "2026-02-15" },
-  { id: "u4", name: "Sarah Lin", email: "sarah.lin@infstones.com", role: "member", status: "active", invitedAt: "2026-03-01" },
-  { id: "u5", name: "Jason Yu", email: "jason.yu@infstones.com", role: "member", status: "inactive", invitedAt: "2026-03-20" },
+  { id: "u1", name: "Hongxuan Liu", email: "hongxuan.liu@infstones.com", role: "admin" },
+  { id: "u2", name: "Pamela Chen", email: "pamela.chen@infstones.com", role: "admin" },
+  { id: "u3", name: "Kevin Wang", email: "kevin.wang@infstones.com", role: "member" },
+  { id: "u4", name: "Sarah Lin", email: "sarah.lin@infstones.com", role: "member" },
+  { id: "u5", name: "Jason Yu", email: "jason.yu@infstones.com", role: "member" },
 ];
